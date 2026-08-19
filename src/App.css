@@ -1,0 +1,279 @@
+.app {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+}
+
+.app__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.app__title {
+  margin: 0;
+  font-size: 1.75rem;
+  line-height: 1.2;
+}
+
+.app__tagline {
+  margin: 4px 0 0;
+  color: var(--text-muted);
+}
+
+.theme-toggle {
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 8px 14px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.15s ease;
+}
+
+.theme-toggle:hover {
+  background: var(--surface-alt);
+}
+
+.search-bar {
+  display: flex;
+  gap: 8px;
+  margin: 20px 0 24px;
+}
+
+.search-bar__input {
+  flex: 1;
+  padding: 12px 16px;
+  font-size: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--surface);
+  color: var(--text);
+}
+
+.search-bar__input:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+.search-bar__button {
+  padding: 12px 22px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  background: var(--accent);
+  color: var(--accent-text);
+  cursor: pointer;
+}
+
+.search-bar__button:hover {
+  filter: brightness(1.08);
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.card__header {
+  margin-bottom: 12px;
+}
+
+.card__title {
+  margin: 0;
+  font-size: 1.15rem;
+}
+
+.card__subtitle {
+  margin: 2px 0 0;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  text-transform: capitalize;
+}
+
+.card__body p {
+  margin: 0 0 8px;
+}
+
+.results {
+  display: grid;
+  gap: 20px;
+}
+
+.current {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+}
+
+.current__temp {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.current__value {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.current__icon {
+  width: 64px;
+  height: 64px;
+}
+
+.current__stats {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: var(--text-muted);
+}
+
+.current__stats li {
+  padding: 2px 0;
+}
+
+.status {
+  border-radius: 12px;
+  padding: 20px;
+  margin: 0 0 20px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.status--loading {
+  color: var(--text-muted);
+}
+
+.status--error {
+  color: var(--danger);
+  background: var(--danger-bg);
+  border-color: var(--danger);
+}
+
+.item-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.item-list__empty {
+  color: var(--text-muted);
+}
+
+.item-list__item + .item-list__item {
+  border-top: 1px solid var(--border);
+}
+
+.forecast-item {
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(130px, 1.4fr) 40px 70px minmax(90px, 1fr) 90px;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 8px;
+  border: none;
+  background: transparent;
+  color: var(--text);
+  font-size: 0.95rem;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.forecast-item:hover {
+  background: var(--surface-alt);
+}
+
+.forecast-item--selected {
+  background: var(--accent-soft);
+}
+
+.forecast-item__icon {
+  width: 36px;
+  height: 36px;
+}
+
+.forecast-item__temp {
+  font-weight: 700;
+}
+
+.forecast-item__desc {
+  color: var(--text-muted);
+  text-transform: capitalize;
+}
+
+.forecast-item__pop {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.load-more {
+  margin-top: 12px;
+  padding: 8px 18px;
+  font-size: 0.9rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface-alt);
+  color: var(--text);
+  cursor: pointer;
+}
+
+.load-more:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+  margin: 0 0 16px;
+}
+
+.detail-grid div {
+  background: var(--surface-alt);
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+
+.detail-grid dt {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.detail-grid dd {
+  margin: 2px 0 0;
+  font-weight: 600;
+}
+
+.app__footer {
+  margin-top: 24px;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+@media (max-width: 620px) {
+  .forecast-item {
+    grid-template-columns: minmax(110px, 1fr) 36px 60px;
+  }
+
+  .forecast-item__desc,
+  .forecast-item__pop {
+    display: none;
+  }
+
+  .current__value {
+    font-size: 2.2rem;
+  }
+}
